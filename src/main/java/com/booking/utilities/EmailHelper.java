@@ -1,4 +1,4 @@
-package com.orangehrm.utilities;
+package com.booking.utilities;
 
 import jakarta.mail.*;
 import jakarta.mail.internet.*;

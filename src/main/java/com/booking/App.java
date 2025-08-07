@@ -1,4 +1,4 @@
-package com.orangehrm;
+package com.booking;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -12,12 +12,13 @@ import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.booking.base.BasePage;
 //import java.io.IOException;
 import com.google.gson.Gson;
 //import com.google.gson.JsonIOException;
 //import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
-import com.orangehrm.base.BasePage;
 
 import org.openqa.selenium.support.ui.Select;
 /**

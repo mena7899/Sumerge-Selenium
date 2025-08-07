@@ -1,4 +1,4 @@
-package com.orangehrm.tests;
+package com.booking.tests;
 
 import org.testng.annotations.Test;
 
@@ -13,10 +13,10 @@ import java.util.Set;
 import org.openqa.selenium.Cookie;
 import org.testng.Assert;
 
-import com.orangehrm.base.BaseTest;
-import com.orangehrm.pages.AdminPage;
-import com.orangehrm.pages.HomePage;
-import com.orangehrm.utilities.WaitUtility;
+import com.booking.base.BaseTest;
+import com.booking.pages.AdminPage;
+import com.booking.pages.HomePage;
+import com.booking.utilities.WaitUtility;
 
 public class AdminTest extends BaseTest{
 	

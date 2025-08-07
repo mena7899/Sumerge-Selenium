@@ -1,4 +1,4 @@
-package com.orangehrm.utilities;
+package com.booking.utilities;
 
 import java.time.Duration;
 import org.openqa.selenium.By;

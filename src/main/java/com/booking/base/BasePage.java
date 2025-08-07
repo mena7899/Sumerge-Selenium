@@ -1,4 +1,4 @@
-package com.orangehrm.base;
+package com.booking.base;
 
 import java.util.List;
 
@@ -10,38 +10,21 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.orangehrm.pages.SidePanel;
-import com.orangehrm.utilities.JavaScriptUtility;
-import com.orangehrm.utilities.WaitUtility;
-public class BasePage2 {
-
-    private static ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<>();
-    protected WebDriver driver;
+import com.booking.pages.SidePanel;
+import com.booking.utilities.JavaScriptUtility;
+import com.booking.utilities.WaitUtility;
+public class BasePage {
+	//static to share it across all instances
+	public static WebDriver driver;
 	//static to share it across all instances and to call it's methods across all classes(pages) with out instance
 	public static SidePanel sidePanel = new SidePanel();
 	
-    public static WebDriver getDriver() {
-        return threadLocalDriver.get();
-    }
-
-    public static void setDriver(WebDriver driverInstance) {
-        threadLocalDriver.set(driverInstance);
-    }
-
-    public static void quitDriver() {
-        if (threadLocalDriver.get() != null) {
-            threadLocalDriver.get().quit();
-            threadLocalDriver.remove();
-        }
-    }
 	
-
-    // Constructor – assigns thread-safe WebDriver
-    public BasePage2() {
-        this.driver = getDriver();
-      
-    }
-
+	//set driver to use it across all classes
+	public void setDriver(WebDriver driver) {
+		BasePage.driver=driver;
+	}
+	
 	//to use it in the click method and set method
 	protected  WebElement find(By locator) {
 		

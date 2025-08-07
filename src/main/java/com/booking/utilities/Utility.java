@@ -1,8 +1,8 @@
-package com.orangehrm.utilities;
+package com.booking.utilities;
 
 import org.openqa.selenium.WebDriver;
 
-import com.orangehrm.base.BasePage;
+import com.booking.base.BasePage;
 
 //the utilities classes is where actions happens and this utility class can be considered as Base class
 //and all the classer will extend it

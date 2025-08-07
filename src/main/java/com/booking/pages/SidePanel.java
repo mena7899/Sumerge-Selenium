@@ -1,9 +1,9 @@
-package com.orangehrm.pages;
+package com.booking.pages;
 
 import org.openqa.selenium.By;
 
-import com.orangehrm.base.BasePage;
-import com.orangehrm.utilities.JavaScriptUtility;
+import com.booking.base.BasePage;
+import com.booking.utilities.JavaScriptUtility;
 
 public class SidePanel extends BasePage {
 

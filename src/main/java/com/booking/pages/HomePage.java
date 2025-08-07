@@ -1,6 +1,6 @@
-package com.orangehrm.pages;
+package com.booking.pages;
 
-import com.orangehrm.base.BasePage;
+import com.booking.base.BasePage;
 
 public class HomePage extends BasePage {
 	

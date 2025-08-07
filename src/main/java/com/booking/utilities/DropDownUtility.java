@@ -1,4 +1,4 @@
-package com.orangehrm.utilities;
+package com.booking.utilities;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -6,8 +6,8 @@ import java.util.stream.Collectors;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-//import com.orangehrm.utilities.WaitUtility;
-//import com.orangehrm.utilities.JavaScriptUtility;
+//import com.booking.utilities.WaitUtility;
+//import com.booking.utilities.JavaScriptUtility;
 
 public class DropDownUtility extends Utility{
 	

@@ -1,7 +1,7 @@
 
-package com.orangehrm.base;
+package com.booking.base;
 
-import static com.orangehrm.utilities.Utility.setWebDriver;
+import static com.booking.utilities.Utility.setWebDriver;
 
 import java.io.*;
 import java.lang.reflect.Method;
@@ -14,12 +14,14 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
+
+import com.booking.base.BasePage;
+import com.booking.pages.LoginPage;
+import com.booking.utilities.EmailHelper;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import com.orangehrm.base.BasePage;
-import com.orangehrm.pages.LoginPage;
-import com.orangehrm.utilities.EmailHelper;
 
 public class BaseTest {
 
