@@ -9,9 +9,9 @@ import java.io.IOException;
 
 public class ExcelDataProvider {
 
-    @DataProvider(name = "excelData")
+    @DataProvider(name = "searchData")
     public Object[][] readExcelData() throws IOException {
-        String excelFilePath = "src/test/resources/loginData.xlsx";
+        String excelFilePath = "src/test/resources/searchData.xlsx";
         FileInputStream fis = new FileInputStream(excelFilePath);
         Workbook workbook = new XSSFWorkbook(fis);
         Sheet sheet = workbook.getSheetAt(0);
