@@ -10,14 +10,12 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.booking.pages.SidePanel;
 import com.booking.utilities.JavaScriptUtility;
 import com.booking.utilities.WaitUtility;
 public class BasePage {
 	//static to share it across all instances
 	public static WebDriver driver;
 	//static to share it across all instances and to call it's methods across all classes(pages) with out instance
-	public static SidePanel sidePanel = new SidePanel();
 	
 	
 	//set driver to use it across all classes
@@ -28,7 +26,7 @@ public class BasePage {
 	//to use it in the click method and set method
 	protected  WebElement find(By locator) {
 		
-		WaitUtility.fluentWaitUntilVisible(2500, locator, 500);
+		WaitUtility.fluentWaitUntilVisible(4000, locator, 500);
 		JavaScriptUtility.scrollToElementJS(locator);
 		return driver.findElement(locator);
 		
@@ -36,7 +34,7 @@ public class BasePage {
 	
 	protected  WebElement findToClick(By locator) {
 		
-		WaitUtility.fluentWaitUntilVisibleAndClickable(2500, locator, 500);
+		WaitUtility.fluentWaitUntilVisibleAndClickable(4000, locator, 500);
 		JavaScriptUtility.scrollToElementJS(locator);
 		return driver.findElement(locator);
 		
@@ -53,7 +51,7 @@ public class BasePage {
 	//find more than one element
 	protected List<WebElement> findList(By locator) {
 		
-		WaitUtility.fluentWaitUntilVisible(2500, locator, 500);
+		WaitUtility.fluentWaitUntilVisible(4000, locator, 500);
 		JavaScriptUtility.scrollToElementJS(locator);
 		return driver.findElements(locator);
 		

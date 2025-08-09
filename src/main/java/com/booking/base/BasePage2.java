@@ -10,7 +10,6 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.booking.pages.SidePanel;
 import com.booking.utilities.JavaScriptUtility;
 import com.booking.utilities.WaitUtility;
 public class BasePage2 {
@@ -18,7 +17,6 @@ public class BasePage2 {
     private static ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<>();
     protected WebDriver driver;
 	//static to share it across all instances and to call it's methods across all classes(pages) with out instance
-	public static SidePanel sidePanel = new SidePanel();
 	
     public static WebDriver getDriver() {
         return threadLocalDriver.get();

@@ -16,7 +16,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import com.booking.base.BasePage;
-import com.booking.pages.LoginPage;
+import com.booking.pages.HomePage;
 import com.booking.utilities.EmailHelper;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -27,8 +27,8 @@ public class BaseTest {
 
     protected WebDriver driver;
     protected BasePage basePage;
-    protected LoginPage loginPage;
-    private String url = "https://opensource-demo.orangehrmlive.com";
+    protected HomePage homePage;
+    private String url = "https://www.booking.com";
 
     public static String getChromeDriverPath() {
         Properties properties = new Properties();
@@ -137,7 +137,7 @@ public class BaseTest {
         basePage = new BasePage();
         basePage.setDriver(driver);
         setWebDriver();
-        loginPage = new LoginPage();
+        homePage = new HomePage();
         
     }
 
@@ -268,6 +268,7 @@ public class BaseTest {
 
     @AfterClass
     public void tearDown() {
+    	driver.manage().deleteAllCookies();
         driver.quit();
         //BasePage2.quitDriver();
     }

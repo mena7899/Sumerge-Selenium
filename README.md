@@ -2,7 +2,7 @@
 
 ## 1-Setup instructions
 
-### clone the online repo "git clone https://github.com/mena7899/eSpace-Selenium"
+### clone the online repo "https://github.com/mena7899/Sumerge-Selenium"
 
 ## 2-Tools Used
 
@@ -20,12 +20,13 @@
 
 ### Maven (added to the environmetal varibles)
 
-### REST AUSSERD 5.3.1 (the authentication handled through frontend using selenium and cookies)
 
 ## 3-How to run the test
 
 ### use git no navigate to the project folder and run "mvn clean install -DskipTests" and "mvn test"
 
-### the selenium task will open a google chrome UI and the REST Assured will run headless
+### a google chrome UI(head mode) will be opened 
 
 ### a test report will be generated in the following path "target/surefire-reports/emailable-report.html"
+
+### if there is a test failure a screenshot of the failure will be saved in this path resources/screenshots/{testMethodName}.png

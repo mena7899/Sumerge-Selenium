@@ -9,6 +9,7 @@ import java.util.Set;
 import java.io.FileReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -29,15 +30,39 @@ public class App extends BasePage{
     public static void main( String[] args ) throws IOException, InterruptedException
     {
     	
-//    	WebDriver driver;
-//    	driver = new ChromeDriver();
-//    	
-//    	driver.manage().window().maximize();
-//    	String url = "https://opensource-demo.orangehrmlive.com";
-//    	driver.get(url);
-//    	//System.out.println( "Hell o' World!app" );
-//    	//enter name
-//    	Thread.sleep(3000);
+    	WebDriver driver;
+    	driver = new ChromeDriver();
+    	
+    	driver.manage().window().maximize();
+    	String url = "https://www.booking.com";
+    	driver.get(url);
+    	//System.out.println( "Hell o' World!app" );
+    	//enter name
+    	Thread.sleep(3000);
+	    WebElement element = driver.findElement(By.cssSelector("input[name='ss']"));
+
+	    JavascriptExecutor executor = (JavascriptExecutor) driver;
+	    
+	    executor.executeScript("arguments[0].scrollIntoView();", element);
+	    executor.executeScript("arguments[0].click();", element);
+
+	    //highlight the input for debug
+	    executor.executeScript("arguments[0].style.border='2px solid red'", element);
+	    
+	    
+
+	    // Clear the input
+	    executor.executeScript("arguments[0].value = '';", element);
+
+	    // Set new value and trigger input + blur events
+	    String script = """
+	        arguments[0].value = arguments[1];
+	        arguments[0].dispatchEvent(new Event('input', { bubbles: true }));
+	        arguments[0].dispatchEvent(new Event('blur'));
+	    """;
+
+	    executor.executeScript(script, element, "alexandria,egypt");
+	 	Thread.sleep(3000);
 //    	driver.findElement(By.cssSelector("input[name='username']")).sendKeys("Admin");
 //    	//enter password
 //    	driver.findElement(By.cssSelector("input[name='password']")).sendKeys("admin123");
